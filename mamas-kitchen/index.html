@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <!-- SEO & PWA head: keep this block in sync across pages -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Mama's Kitchen | Homestyle food in Melville, Johannesburg</title>
+    <meta name="description" content="Order breakfast, lunch, dinner and drinks from Mama's Kitchen in Melville. Delivery and collection. Pay with PayFast or WhatsApp.">
+    <meta name="theme-color" content="#ff4d00">
+    <link rel="canonical" href="https://mamaskitchen.example/">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    <meta property="og:title" content="Mama's Kitchen">
+    <meta property="og:description" content="Homestyle South African food, delivered hot across Melville and surrounds.">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:locale" content="en_ZA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Mama's Kitchen",
+        "servesCuisine": ["South African", "Cape Malay", "Braai"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 7th Street",
+          "addressLocality": "Melville",
+          "addressRegion": "Gauteng",
+          "postalCode": "2092",
+          "addressCountry": "ZA"
+        },
+        "telephone": "+27114820190",
+        "url": "https://mamaskitchen.example/",
+        "priceRange": "R",
+        "acceptsReservations": "False",
+        "menu": "https://mamaskitchen.example/menu.html"
+      }
+    </script>
+  </head>
+  <body data-page="home">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Top bar: logo, area, cart, install -->
+    <header class="header">
+      <a class="logo" href="index.html">
+        <img src="assets/icons/icon.svg" alt="">
+        Mama's Kitchen
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="menu.html" data-nav="menu">Menu</a>
+        <a href="cart.html" data-nav="cart">Cart</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="header__meta">
+        <small>Delivering · Melville</small>
+      </div>
+      <div class="header__actions">
+        <button type="button" class="btn btn--ghost" data-install hidden>Install</button>
+        <a class="icon-btn" href="cart.html" aria-label="Open cart">
+          🛒
+          <span class="badge" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero + search that jumps to the menu -->
+      <section class="hero wrap">
+        <p class="eyebrow">Melville · Joburg</p>
+        <h1>Homestyle South African food, delivered hot.</h1>
+        <p class="lede">Bunny chows, potjie, pap and a proper braai platter — from Mama’s kitchen to your stoep.</p>
+        <form class="search" action="menu.html" method="get" role="search">
+          <label class="visually-hidden" for="q" style="position:absolute;left:-999px">Search the menu</label>
+          <input id="q" name="q" type="search" placeholder="Search bunny, peri, malva…" autocomplete="off">
+          <button class="btn btn--primary" type="submit">Search</button>
+        </form>
+        <div class="promo" aria-label="Offers">
+          <a href="menu.html">
+            <h2>Free delivery from R250</h2>
+            <p>Otherwise R35 to Melville, Auckland Park &amp; Braamfontein.</p>
+          </a>
+          <div class="tile tile--sage">
+            <h2>Collection in 20 min</h2>
+            <p>12 7th Street, Melville. Skip the queue with a WhatsApp order.</p>
+          </div>
+        </div>
+        <nav class="cats" aria-label="Menu categories">
+          <a class="cat" href="menu.html?cat=breakfast"><span>🍳</span>Breakfast</a>
+          <a class="cat" href="menu.html?cat=lunch"><span>🍛</span>Lunch</a>
+          <a class="cat" href="menu.html?cat=dinner"><span>🔥</span>Dinner</a>
+          <a class="cat" href="menu.html?cat=drinks"><span>🥤</span>Drinks</a>
+        </nav>
+      </section>
+
+      <section class="wrap">
+        <header class="section-head">
+          <h2>Popular near you</h2>
+          <a href="menu.html">Full menu</a>
+        </header>
+        <div id="featured-grid" class="grid"></div>
+        <noscript>
+          <p>Turn on JavaScript to add dishes to your cart. Call 011 482 0190 to order.</p>
+        </noscript>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <p><strong>Mama's Kitchen</strong><br>12 7th Street, Melville · Tue–Sun 07:00–21:30<br>© <span id="year"></span> · Prices include VAT</p>
+    </footer>
+
+    <!-- Phone tab bar — hidden on large screens via CSS -->
+    <nav class="bottom-nav" aria-label="App">
+      <a href="index.html" data-nav="home">🏠<br>Home</a>
+      <a href="menu.html" data-nav="menu">🍽️<br>Menu</a>
+      <a href="cart.html" data-nav="cart">🛒<br>Cart</a>
+      <a href="contact.html" data-nav="contact">📞<br>Contact</a>
+    </nav>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </body>
+</html>
